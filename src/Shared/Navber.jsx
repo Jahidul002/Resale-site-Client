@@ -1,7 +1,19 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { authContext } from '../Context/Context';
 
 const Navber = () => {
+    const { user, LogOut } = useContext(authContext)
+
+    const handleDel = e => {
+        LogOut()
+            .then(res => { })
+            .then(err => console.error(err))
+    }
+
+
+
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -11,8 +23,6 @@ const Navber = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 bg-red-200">
                         <Link className='btn-outline my-2' to="/">Home</Link>
-                        <Link className='btn-outline my-2' to="login">Log In</Link>
-                        <Link className='btn-outline my-2' to="register">Register</Link>
 
                     </ul>
                 </div>
@@ -21,12 +31,24 @@ const Navber = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     <Link className='btn btn-outline mx-2' to="/">Home</Link>
-                    <Link className='btn btn-outline mx-2' to="login">Log In</Link>
-                    <Link className='btn btn-outline mx-2' to="register">Register</Link>
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Get started</a>
+                {user ? <>
+                    <div className='flex'>
+                        <button onClick={handleDel} className='btn'>Logout</button>
+                        {/* implement user profile route */}
+                        <Link to="profile">
+                            <img className='h-12 w-12 rounded-full mx-2' src={user?.photoURL} alt="" />
+                        </Link>
+                    </div>
+                </>
+                    :
+                    <>
+                        <Link className='btn btn-outline mx-2' to="login">Log In</Link>
+                        <Link className='btn btn-outline mx-2' to="register">Register</Link>
+                    </>
+                }
             </div>
         </div>
     );

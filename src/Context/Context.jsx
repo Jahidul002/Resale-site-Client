@@ -9,7 +9,7 @@ import appp from '../Firebase/Firebase.config';
 export const authContext = createContext()
 const auth = getAuth(appp)
 
-const ContextApi = ({ children }) => {
+const Context = ({ children }) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
 
@@ -52,7 +52,7 @@ const ContextApi = ({ children }) => {
     }, [])
 
 
-    const AuthInfo = { user, setUser, creatUser, signIN, googleLogIn, LogOut, loading, UpdtUserProfile }
+    const AuthInfo = { user, setUser, creatUser, signIN, googleLogIn, LogOut, loading, UpdtUserProfile, sample }
     return (
         <div>
             <authContext.Provider value={AuthInfo}>
@@ -62,4 +62,4 @@ const ContextApi = ({ children }) => {
     );
 };
 
-export default ContextApi;
+export default Context;
