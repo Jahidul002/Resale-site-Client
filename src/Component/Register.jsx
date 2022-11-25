@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { authContext } from '../Context/Context';
 
 const Register = () => {
+    const [loading, setLoading] = useState(true)
     const { creatUser, UpdtUserProfile } = useContext(authContext)
 
 
@@ -34,7 +35,7 @@ const Register = () => {
                         const user = res.user
                         console.log(user);
                         handleProfile(name, imageUrl)
-
+                        setLoading(false)
                         // data for user backend
                         const userInfo = {
                             name: name,
@@ -44,7 +45,7 @@ const Register = () => {
                         }
 
                     })
-                    .then(err => console.error(err))
+                    .then(err => console.log(err.message))
             })
     }
 
@@ -60,7 +61,9 @@ const Register = () => {
 
 
 
-
+    if (loading) {
+        <h1>loaaaaaading</h1>
+    }
 
     return (
         <div>

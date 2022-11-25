@@ -1,6 +1,7 @@
 import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import UserInfo from '../Component/UserInfo';
 import { authContext } from '../Context/Context';
 
 const Navber = () => {
@@ -37,10 +38,16 @@ const Navber = () => {
                 {user ? <>
                     <div className='flex'>
                         <button onClick={handleDel} className='btn'>Logout</button>
-                        {/* implement user profile route */}
-                        <Link to="profile">
-                            <img className='h-12 w-12 rounded-full mx-2' src={user?.photoURL} alt="" />
-                        </Link>
+
+                        <div className="tooltip tooltip-left" data-tip="click here
+                            for view details">
+                            <label htmlFor="user-info-modal">
+                                <img className='h-12 w-12 rounded-full mx-2' src={user?.photoURL} alt="" />
+                            </label>
+
+
+                        </div>
+                        <UserInfo></UserInfo>
                     </div>
                 </>
                     :

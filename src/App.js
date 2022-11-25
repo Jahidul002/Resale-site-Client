@@ -4,7 +4,9 @@ import { PowerHouse } from './Router/Router';
 
 const App = () => {
   return (
-    <RouterProvider router={PowerHouse} />
+    <div className='container mx-auto'>
+      <RouterProvider router={PowerHouse} />
+    </div>
   );
 };
 

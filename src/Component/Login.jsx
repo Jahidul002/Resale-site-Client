@@ -1,18 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useContext } from 'react';
+import { authContext } from '../Context/Context';
 
 const Login = () => {
+    const { signIN } = useContext(authContext)
+    const [error, setError] = useState(null)
 
 
     const handlesub = (e) => {
         e.preventDefault()
-        const select = e.target.select.value
-        console.log(select);
+        const form = e.target
+        const email = form.email.value
+        const pass = form.password.value
+        // console.log(email, pass);
+        signIN(email, pass)
+            .then(res => {
+                const user = res.user
+                console.log(user);
+                setError('')
+            })
+            .then(err => {
+                console.log(err);
+                setError(err.message)
+            })
     }
-
-
-
-
-
 
 
 
@@ -35,8 +46,9 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input name='password' type="text" placeholder="password" className="input input-bordered" />
+                                <input name='password' type="password" placeholder="password" className="input input-bordered" />
                             </div>
+                            {error}
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
                             </div>

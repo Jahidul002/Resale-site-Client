@@ -1,6 +1,182 @@
 [
     {
         "name": "Yamaha Rx-100",
-        "img": "https://ibb.co/st3hYvk"
+        "img": "https://ibb.co/st3hYvk",
+        "location": "dhaka",
+        "resale": "55,000",
+        "new": "100,000",
+        "catagory": "Yamaha",
+        "usedTime": "2015-2022"
+    },
+    {
+        "name": "Pulser Ns-160",
+        "img": "https://ibb.co/HgbS0TQ",
+        "location": "dhaka",
+        "resale": "95,000",
+        "new": "250,000",
+        "catagory": "Pulser",
+        "usedTime": "2018-2022"
+    },
+    {
+        "name": "Pulser 180",
+        "img": "https://ibb.co/Snjyp3J",
+        "location": "dhaka",
+        "resale": "155,000",
+        "new": "280,000",
+        "catagory": "Pulser",
+        "usedTime": "2019-2022"
+    },
+    {
+        "name": "Pulser 150",
+        "img": "https://ibb.co/tM9G5Jq",
+        "location": "dhaka",
+        "resale": "200,000",
+        "new": "110,000",
+        "catagory": "Pulser",
+        "usedTime": "2016-2022"
+    },
+    {
+        "name": "Pulser 130",
+        "img": "https://ibb.co/jvfgXGY",
+        "location": "dhaka",
+        "resale": "185,000",
+        "new": "90,000",
+        "catagory": "Pulser",
+        "usedTime": "2015-2022"
+    },
+    {
+        "name": "Pulser 125",
+        "img": "https://ibb.co/JvM2t1q",
+        "location": "dhaka",
+        "resale": "185,000",
+        "new": "88,000",
+        "catagory": "Pulser",
+        "usedTime": "2014-2022"
+    },
+    {
+        "name": "Hero motocorp",
+        "img": "https://ibb.co/xDmPkqp",
+        "location": "dhaka",
+        "resale": "165,000",
+        "new": "45,000",
+        "catagory": "Hero",
+        "usedTime": "2013-2022"
+    },
+    {
+        "name": "HEro splendor",
+        "img": "https://ibb.co/6ypxpyZ",
+        "location": "dhaka",
+        "resale": "185,000",
+        "new": "100,000",
+        "catagory": "Hero",
+        "usedTime": "2015-2022"
+    },
+    {
+        "name": "Hero Ignitor",
+        "img": "https://ibb.co/zstjTBj",
+        "location": "dhaka",
+        "resale": "205,000",
+        "new": "110,000",
+        "catagory": "Hero",
+        "usedTime": "2018-2022"
+    },
+    {
+        "name": "Hero Hunk",
+        "img": "https://ibb.co/84Xb9tT",
+        "location": "dhaka",
+        "resale": "225,000",
+        "new": "135,000",
+        "catagory": "Hero",
+        "usedTime": "2015-2022"
+    },
+    {
+        "name": "Hero cafe racer modified",
+        "img": "https://ibb.co/267whpx",
+        "location": "dhaka",
+        "resale": "125,000",
+        "new": "53,000",
+        "catagory": "Hero",
+        "usedTime": "2015-2022"
+    },
+    {
+        "name": "Gixxer-sf-mira",
+        "img": "https://ibb.co/BfQ03LC",
+        "location": "dhaka",
+        "resale": "255,000",
+        "new": "180,000",
+        "catagory": "Gixxer",
+        "usedTime": "2019-2022"
+    },
+    {
+        "name": "Gixxer new edition",
+        "img": "https://ibb.co/R4fct0L",
+        "location": "dhaka",
+        "resale": "285,000",
+        "new": "210,000",
+        "catagory": "Gixxer",
+        "usedTime": "2021-2022"
+    },
+    {
+        "name": "Gixxer 2021",
+        "img": "https://ibb.co/gg55p3q",
+        "location": "dhaka",
+        "resale": "270,000",
+        "new": "230,000",
+        "catagory": "Gixxer",
+        "usedTime": "2021-2022"
+    },
+    {
+        "name": "Gixxer single disk",
+        "img": "https://ibb.co/SKXppLs",
+        "location": "dhaka",
+        "resale": "210,000",
+        "new": "155,000",
+        "catagory": "Gixxer",
+        "usedTime": "2015-2022"
+    },
+    {
+        "name": "Gixxer single disk",
+        "img": "https://ibb.co/SKXppLs",
+        "location": "dhaka",
+        "resale": "210,000",
+        "new": "155,000",
+        "catagory": "Gixxer",
+        "usedTime": "2015-2022"
+    },
+    {
+        "name": "Yamaha mt-7",
+        "img": "https://ibb.co/pbdYk9z",
+        "location": "dhaka",
+        "resale": "525,000",
+        "new": "405,000",
+        "catagory": "Yamaha",
+        "usedTime": "2022-2022"
+    },
+    {
+        "name": "Yamaha ktm",
+        "img": "https://ibb.co/r7Ss9v6",
+        "location": "dhaka",
+        "resale": "525,000",
+        "new": "455,000",
+        "catagory": "Yamaha",
+        "usedTime": "2019-2022"
+    },
+    {
+        "name": "Yamaha cafe racer modified",
+        "img": "https://ibb.co/D8zg0Bt",
+        "location": "dhaka",
+        "resale": "220,000",
+        "new": "155,000",
+        "catagory": "Yamaha",
+        "usedTime": "2018-2022"
+    },
+    {
+        "name": "Yamaha mt-9",
+        "img": "https://ibb.co/rFq2rR4",
+        "location": "dhaka",
+        "resale": "525,000",
+        "new": "375,000",
+        "catagory": "Yamaha",
+        "usedTime": "2021-2022"
     }
 ]
