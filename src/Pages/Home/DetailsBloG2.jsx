@@ -1,5 +1,5 @@
 import React from 'react';
-import quotes1 from '../Shared/utilities/Gixxer New Edition 2019 (ABS).png'
+import quotes1 from '../../Shared/utilities/Gixxer New Edition 2019 (ABS).png'
 
 const DetailsBloG2 = () => {
     return (

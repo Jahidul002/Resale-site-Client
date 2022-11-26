@@ -24,14 +24,17 @@ const Navber = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 bg-red-200">
                         <Link className='btn-outline my-2' to="/">Home</Link>
+                        <Link className='btn-outline my-2' to="/add-product">Add Service</Link>
 
                     </ul>
                 </div>
                 <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal p-0">
+                <ul className="menu menu-horizontal p-0 flex justify-center items-center">
                     <Link className='btn btn-outline mx-2' to="/">Home</Link>
+                    <Link className=' btn btn-outline my-2' to="/add-product">Add Service</Link>
+
                 </ul>
             </div>
             <div className="navbar-end">

@@ -1,5 +1,5 @@
 import React from 'react';
-import photo from '../Shared/utilities/hero cafe racer.jpg'
+import photo from '../../Shared/utilities/hero cafe racer.jpg'
 const DetailsBloG1 = () => {
     return (
         <div className='md:grid grid-cols-2 gap-10 mx-10 mb-10 bg-zinc-300 rounded-lg'>

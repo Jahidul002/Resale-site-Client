@@ -17,10 +17,15 @@ const Catagory = () => {
     }, [])
 
     return (
-        <div className='md:grid grid-cols-4  mx-auto gap-5'>
-            {data?.map(dt => <CatagoryDisplay key={dt._id} data={dt}></CatagoryDisplay>)}
+        <div>
+            <h1 className='text-center text-2xl font-semibold border-y-4 border-y-gray-600 pb-5 mb-5'>Select your  Catagory</h1>
+            <hr />
+            <div className='md:grid grid-cols-4  mx-auto gap-5'>
+                {data?.map(dt => <CatagoryDisplay key={dt._id} data={dt}></CatagoryDisplay>)}
+            </div>
         </div>
     );
 };
 
 export default Catagory;
+

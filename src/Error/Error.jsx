@@ -1,9 +1,9 @@
 import React from 'react';
-
+import error from '../Shared/utilities/error.gif'
 const Error = () => {
     return (
-        <div>
-            <h1>eta error element,ekhane pore kaaj korte voilla jaio na</h1>
+        <div className='h-full flex justify-center items-center'>
+            <img src={error} alt="" />
         </div>
     );
 };
