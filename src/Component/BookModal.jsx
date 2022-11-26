@@ -2,7 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { authContext } from '../Context/Context';
 
-const BookModal = ({ price, name }) => {
+const BookModal = ({ data }) => {
     const { user } = useContext(authContext)
 
 
@@ -21,13 +21,13 @@ const BookModal = ({ price, name }) => {
                                 <label className="label">
                                     <span className="label-text">name</span>
                                 </label>
-                                <input name='name' defaultValue={user?.displayName} readOnly type="text" placeholder="name" className="input input-bordered" />
+                                <input defaultValue={user?.displayName} name='name' type="text" placeholder="name" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">email</span>
                                 </label>
-                                <input name='email' defaultValue={user?.email} readOnly type="text" placeholder="email" className="input input-bordered" />
+                                <input name='email' type="text" placeholder="email" className="input input-bordered" />
                             </div>
                         </div>
                         <div className='flex justify-evenly'>
@@ -35,13 +35,13 @@ const BookModal = ({ price, name }) => {
                                 <label className="label">
                                     <span className="label-text">Item name</span>
                                 </label>
-                                <input defaultValue={name} readOnly name='Item' type="text" placeholder="Item name" className="input input-bordered" />
+                                <input name='Item' type="text" placeholder="Item name" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Item Price</span>
                                 </label>
-                                <input defaultValue={price} readOnly name='price' type="text" placeholder="Item Price" className="input input-bordered" />
+                                <input name='price' type="text" placeholder="Item Price" className="input input-bordered" />
                             </div>
                         </div>
                     </div>

@@ -20,8 +20,7 @@ const Carddisplay = ({ data }) => {
                         <label htmlFor="Book-modal-2" className="btn btn-primary">Book Now</label>
                     </div>
                     <BookModal
-                        name={name}
-                        price={resale}
+                        data={data}
                     ></BookModal>
                 </div>
             </div>
