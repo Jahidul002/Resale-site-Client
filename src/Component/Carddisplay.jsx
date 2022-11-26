@@ -2,7 +2,7 @@ import React from 'react';
 import BookModal from './BookModal';
 
 const Carddisplay = ({ data }) => {
-    console.log(data);
+    // console.log(data);
     const { img, name, location, resale, usedTime, _id } = data
 
 

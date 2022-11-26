@@ -27,14 +27,14 @@ export const PowerHouse = createBrowserRouter([
                 element: <Register></Register>
             },
             {
-                path: 'displaybyCata/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/alldatas?catagory=${params.id}`),
+                path: 'displaybyCata/:name',
+                loader: ({ params }) => fetch(`http://localhost:5000/alldatas?catagory=${params.name}`),
                 element: <DisplayByCatagory></DisplayByCatagory>
             },
             {
                 path: 'add-product',
                 element: <AddProduct></AddProduct>
-            }
+            },
         ]
     }
 ])
