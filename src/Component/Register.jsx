@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { authContext } from '../Context/Context';
 
 const Register = () => {
@@ -15,6 +16,7 @@ const Register = () => {
         const form = e.target
         const name = form.name.value
         const image = form.file.files[0]
+        const select = form.select.value
         const email = form.email.value
         const pass = form.password.value
         // const select = e.target.select.value
@@ -41,8 +43,21 @@ const Register = () => {
                             name: name,
                             photo: imageUrl,
                             email: email,
-                            // select: select
+                            select: select
                         }
+                        fetch('http://localhost:5000/user', {
+                            method: "POST",
+                            headers: {
+                                'content-type': 'application/json'
+                            },
+                            body: JSON.stringify(userInfo)
+                        })
+                            .then(res => res.json())
+                            .then(data => {
+                                if (data.acknowledged) {
+                                    toast.success('User created SuccessFully')
+                                }
+                            })
 
                     })
                     .then(err => console.log(err.message))
@@ -90,12 +105,13 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Photo</span>
                                 </label>
-                                <select className="select select-secondary w-full max-w-xs">
+                                <select name='select' className="select select-secondary w-full max-w-xs">
                                     <option disabled selected>Register as</option>
-                                    <option>seller</option>
-                                    <option>Buyer</option>
+                                    <option value="seller">seller</option>
+                                    <option value="buyer">Buyer</option>
                                 </select>
                             </div>
+
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
