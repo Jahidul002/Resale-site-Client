@@ -51,6 +51,7 @@ export const PowerHouse = createBrowserRouter([
         children: [
             {
                 path: '/dashboard/all-user',
+                loader: () => fetch('http://localhost:5000/user'),
                 element: <Alluser></Alluser>
             }
         ]
