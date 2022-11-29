@@ -6,8 +6,11 @@ import Login from "../Component/Login";
 import Register from "../Component/Register";
 import Error from "../Error/Error";
 import AddProduct from "../Pages/AddProduct/AddProduct";
+import AllProduct from "../Pages/Dashboard/AllProduct";
 import Alluser from "../Pages/Dashboard/Alluser";
 import DashHome from "../Pages/Dashboard/DashHome";
+import MyProduct from "../Pages/Dashboard/MyProduct";
+import ReportedProduct from "../Pages/Dashboard/ReportedProduct";
 import Home from "../Pages/Home/Home";
 import Root from "../Root/Root";
 
@@ -53,6 +56,19 @@ export const PowerHouse = createBrowserRouter([
                 path: '/dashboard/all-user',
                 loader: () => fetch('http://localhost:5000/user'),
                 element: <Alluser></Alluser>
+            },
+            {
+                path: '/dashboard/all-product',
+                loader: () => fetch('http://localhost:5000/alldata'),
+                element: <AllProduct></AllProduct>
+            },
+            {
+                path: '/dashboard/reported-product',
+                element: <ReportedProduct></ReportedProduct>
+            },
+            {
+                path: '/dashboard/my-product',
+                element: <MyProduct></MyProduct>
             }
         ]
     }

@@ -43,7 +43,7 @@ const Register = () => {
                             name: name,
                             photo: imageUrl,
                             email: email,
-                            select: select
+                            role: select
                         }
                         fetch('http://localhost:5000/user', {
                             method: "POST",

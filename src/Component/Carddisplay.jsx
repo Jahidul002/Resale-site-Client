@@ -7,21 +7,6 @@ const Carddisplay = ({ data }) => {
     // console.log(data);
     const { img, name, location, resale, usedTime, _id } = data
 
-    const handledel = id => {
-        fetch(`http://localhost:5000/alldata/${id}`, {
-            method: "DELETE",
-        })
-            .then(res => res.json())
-            .then(data => {
-                window.location.reload()
-                toast.error('service deleted')
-            })
-    }
-
-
-
-
-
 
     return (
         <div>
@@ -34,7 +19,6 @@ const Carddisplay = ({ data }) => {
                     <p className='font-semibold'>Resale price:<span className='text-yellow-900'>{resale}</span></p>
                     <p className='font-semibold'>Used Time:<span className='text-yellow-900'>{usedTime}</span></p>
                     <div className="card-actions justify-end">
-                        <button onClick={() => handledel(_id)} className='btn'>delete</button>
                         <label htmlFor="Book-modal-2" className="btn btn-primary">
                             <Link to={`/modal/${_id}`}>Book Now</Link>
                         </label>

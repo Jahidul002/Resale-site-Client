@@ -20,14 +20,15 @@ const DashHome = () => {
                             <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
                             <ul className="menu p-4 w-80 bg-base-100 text-base-content">
                                 <Link to="/dashboard/all-user"><p>All User</p></Link>
-                                <li><a>Sidebar Item 2</a></li>
+                                <Link to="/dashboard/all-product">All product</Link>
+                                <Link to="/dashboard/reported-product">Reported product</Link>
+                                <Link to="/dashboard/my-product">My product</Link>
                             </ul>
 
                         </div>
                     </div>
 
                 </div>
-                <div><Outlet></Outlet></div>
             </div>
         </div>
     );
