@@ -3,6 +3,8 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import UserInfo from '../Component/UserInfo';
 import { authContext } from '../Context/Context';
+import logo from '../Shared/utilities/logo.png'
+
 
 const Navber = () => {
     const { user, LogOut } = useContext(authContext)
@@ -29,7 +31,7 @@ const Navber = () => {
 
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <Link to="/"> <img src={logo} className="w-20 " alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0 flex justify-center items-center">
