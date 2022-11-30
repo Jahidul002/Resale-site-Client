@@ -2,9 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 import { authContext } from '../Context/Context';
 
 const Register = () => {
+    const navigate = useNavigate()
     const [loading, setLoading] = useState(true)
     const { creatUser, UpdtUserProfile } = useContext(authContext)
 
@@ -45,7 +47,7 @@ const Register = () => {
                             email: email,
                             role: select
                         }
-                        fetch('http://localhost:5000/user', {
+                        fetch('https://assignment-12-server-theta-orcin.vercel.app/user', {
                             method: "POST",
                             headers: {
                                 'content-type': 'application/json'
@@ -56,6 +58,7 @@ const Register = () => {
                             .then(data => {
                                 if (data.acknowledged) {
                                     toast.success('User created SuccessFully')
+                                    navigate('/')
                                 }
                             })
 

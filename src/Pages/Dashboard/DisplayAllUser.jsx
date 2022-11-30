@@ -5,7 +5,7 @@ const DisplayAllUser = ({ data, i }) => {
     const handledel = id => {
         const agree = window.confirm(`are you sure delete ${name}`)
         if (agree)
-            fetch(`http://localhost:5000/user/${_id}`, {
+            fetch(`https://assignment-12-server-theta-orcin.vercel.app/user/${_id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())

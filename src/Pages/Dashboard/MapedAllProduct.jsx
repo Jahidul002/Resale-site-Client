@@ -9,7 +9,7 @@ const MapedAllProduct = ({ data }) => {
     const { img, name, resale, usedTime, _id, location } = data
 
     const handledel = id => {
-        fetch(`http://localhost:5000/alldata/${id}`, {
+        fetch(`https://assignment-12-server-theta-orcin.vercel.app/alldata/${id}`, {
             method: "DELETE",
         })
             .then(res => res.json())

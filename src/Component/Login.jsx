@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { useContext } from 'react';
+import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 import { authContext } from '../Context/Context';
 
 const Login = () => {
     const { signIN } = useContext(authContext)
     const [error, setError] = useState(null)
-
+    const navigate = useNavigate()
 
     const handlesub = (e) => {
         e.preventDefault()
@@ -18,10 +20,13 @@ const Login = () => {
                 const user = res.user
                 console.log(user);
                 setError('')
+                navigate('/')
+                toast.success('Log in Successfully')
             })
             .then(err => {
-                console.log(err);
-                setError(err.message)
+                if (err) {
+                    toast.error('something went wrong,please try again')
+                }
             })
     }
 

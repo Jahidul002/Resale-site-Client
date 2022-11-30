@@ -46,7 +46,7 @@ const AddProduct = () => {
                     time: time
                 }
                 console.log(ProductInfo);
-                fetch('http://localhost:5000/product', {
+                fetch('https://assignment-12-server-theta-orcin.vercel.app/product', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'

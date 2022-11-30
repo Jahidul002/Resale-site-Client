@@ -8,7 +8,7 @@ const Catagory = () => {
     const [data, setdata] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/catagory')
+        fetch('https://assignment-12-server-theta-orcin.vercel.app/catagory')
             .then(res => res.json())
             .then(data => {
                 setdata(data)

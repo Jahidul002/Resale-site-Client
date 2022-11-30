@@ -24,8 +24,8 @@ const Navber = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 bg-red-200">
                         <Link className='btn-outline my-2' to="/">Home</Link>
-                        <Link className='btn-outline my-2' to="/add-product">Add Service</Link>
                         <Link className='btn-outline my-2' to="/dashboard">Dashboard</Link>
+                        <Link className='btn-outline my-2' to="/blog">Blog</Link>
 
                     </ul>
                 </div>
@@ -34,8 +34,8 @@ const Navber = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0 flex justify-center items-center">
                     <Link className='btn btn-outline mx-2' to="/">Home</Link>
-                    <Link className=' btn btn-outline mx-2' to="/add-product">Add Service</Link>
                     <Link className=' btn btn-outline mx-2' to="/dashboard">Dashboard</Link>
+                    <Link className=' btn btn-outline mx-2' to="/blog">Blog</Link>
 
                 </ul>
             </div>

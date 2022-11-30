@@ -12,7 +12,11 @@ import DashHome from "../Pages/Dashboard/DashHome";
 import MyProduct from "../Pages/Dashboard/MyProduct";
 import ReportedProduct from "../Pages/Dashboard/ReportedProduct";
 import Home from "../Pages/Home/Home";
+import PrivateRoute from "../Route/PrivateRoute";
 import Root from "../Root/Root";
+import SellerRoute from "../Route/SellerRoute";
+import Blog from '../Component/Blog'
+import AdminRoute from "../Route/AdminRoute";
 
 export const PowerHouse = createBrowserRouter([
     {
@@ -34,7 +38,7 @@ export const PowerHouse = createBrowserRouter([
             },
             {
                 path: 'displaybyCata/:name',
-                loader: ({ params }) => fetch(`http://localhost:5000/alldatas?catagory=${params.name}`),
+                loader: ({ params }) => fetch(`https://assignment-12-server-theta-orcin.vercel.app/alldatas?catagory=${params.name}`),
                 element: <DisplayByCatagory></DisplayByCatagory>
             },
             {
@@ -43,32 +47,37 @@ export const PowerHouse = createBrowserRouter([
             },
             {
                 path: 'modal/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/alldata/${params.id}`),
+                loader: ({ params }) => fetch(`https://assignment-12-server-theta-orcin.vercel.app/alldata/${params.id}`),
                 element: <BookModal></BookModal>
+            },
+            {
+                path: 'blog',
+                element: <Blog></Blog>
             }
         ]
     },
     {
         path: 'dashboard',
-        element: <DashHome></DashHome>,
+        element: <PrivateRoute><DashHome></DashHome></PrivateRoute>,
         children: [
             {
                 path: '/dashboard/all-user',
-                loader: () => fetch('http://localhost:5000/user'),
-                element: <Alluser></Alluser>
+                loader: () => fetch('https://assignment-12-server-theta-orcin.vercel.app/user'),
+                element: <AdminRoute><Alluser></Alluser></AdminRoute>
             },
             {
                 path: '/dashboard/all-product',
-                loader: () => fetch('http://localhost:5000/alldata'),
-                element: <AllProduct></AllProduct>
+                loader: () => fetch('https://assignment-12-server-theta-orcin.vercel.app/alldata'),
+                element: <AdminRoute><AllProduct></AllProduct></AdminRoute>
             },
             {
                 path: '/dashboard/reported-product',
-                element: <ReportedProduct></ReportedProduct>
+                loader: () => fetch('https://assignment-12-server-theta-orcin.vercel.app/report'),
+                element: <AdminRoute><ReportedProduct></ReportedProduct></AdminRoute>
             },
             {
                 path: '/dashboard/my-product',
-                element: <MyProduct></MyProduct>
+                element: <SellerRoute><MyProduct></MyProduct></SellerRoute>
             }
         ]
     }
